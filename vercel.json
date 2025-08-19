@@ -2,15 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "src/index.ts",
-      "use": "@vercel/node",
-      "config": { "installCommand": "npm install" }
+      "src": "package.json",
+      "use": "@vercel/node"
     }
   ],
-  "routes": [{ "src": "/(.*)", "dest": "src/index.ts" }],
-  "env": {
-    "NODE_ENV": "production",
-    "MONGO_URL": "mongodb+srv://rushikesh123:rushikesh123@cluster0.f4jbob4.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
-    "JWT_SECRET": "592dd6811351f7c1516b2f89a902f9ee9f3a1393134e5f8d3d0f084367131756"
-  }
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/dist/index.js"
+    }
+  ]
 }
