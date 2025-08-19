@@ -7,7 +7,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: ["http://localhost:5173"],
+    origin: ["https://real-time-chat-frontend-jnfp6k37o-rush-projects.vercel.app"],
   },
 });
 
@@ -35,3 +35,4 @@ io.on("connection", (socket) => {
 });
 
 export { io, app, server };
+
