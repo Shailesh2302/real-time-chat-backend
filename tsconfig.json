@@ -1,17 +1,17 @@
 {
   "compilerOptions": {
-    "target": "ES2020",              // Modern JS features
-    "module": "CommonJS",            // Compile to CommonJS, no extensions needed
-    "rootDir": "src",                // Your source folder
-    "outDir": "dist",                // Compiled JS output
-    "strict": true,                  // Enable all strict checks
-    "esModuleInterop": true,         // Allows default imports from CommonJS
+    "target": "ES2020",
+    "module": "CommonJS",
+    "rootDir": "src",
+    "outDir": "dist",
+    "strict": true,
+    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true,            // Optional, faster build
-    "moduleResolution": "node"       // Node-style resolution without requiring extensions
+    "skipLibCheck": true,
+    "moduleResolution": "node"
   },
   "include": ["src"],
   "ts-node": {
-    "esm": false                     // Important: run ts-node in CommonJS mode
+    "esm": false
   }
 }
