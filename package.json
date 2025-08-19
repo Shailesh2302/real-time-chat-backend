@@ -10,7 +10,7 @@
   },
   "keywords": [],
   "author": "",
-  "type": "module",
+  "type": "commonjs",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^3.0.2",
