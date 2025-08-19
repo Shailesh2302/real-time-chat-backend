@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "dev": "nodemon --watch src --ext ts --exec tsx src/index.ts",
+    "dev": "nodemon --watch --ext ts --exec tsx src/index.ts",
     "build": "tsc -b",
     "start": "node dist/index.js"
   },
