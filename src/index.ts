@@ -16,7 +16,7 @@ app.use(cookieParser());
 const __dirname = path.resolve();
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://real-time-chat-frontend-lemon.vercel.app",
     credentials: true,
   })
 );
