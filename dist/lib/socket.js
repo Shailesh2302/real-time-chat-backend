@@ -1,14 +1,24 @@
-import { Server } from "socket.io";
-import http from "http";
-import express from "express";
-const app = express();
-const server = http.createServer(app);
-const io = new Server(server, {
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.server = exports.app = exports.io = void 0;
+exports.getRecieverSocketId = getRecieverSocketId;
+const socket_io_1 = require("socket.io");
+const http_1 = __importDefault(require("http"));
+const express_1 = __importDefault(require("express"));
+const app = (0, express_1.default)();
+exports.app = app;
+const server = http_1.default.createServer(app);
+exports.server = server;
+const io = new socket_io_1.Server(server, {
     cors: {
         origin: ["http://localhost:5173"],
     },
 });
-export function getRecieverSocketId(userId) {
+exports.io = io;
+function getRecieverSocketId(userId) {
     return userSocketMap[userId];
 }
 const userSocketMap = {};
@@ -25,4 +35,3 @@ io.on("connection", (socket) => {
             io.emit("getOnlineUsers", Object.keys(userSocketMap));
     });
 });
-export { io, app, server };

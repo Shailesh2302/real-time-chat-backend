@@ -1,9 +1,11 @@
-import { v2 as cloudinary } from "cloudinary";
-import { config } from "dotenv";
-config();
-cloudinary.config({
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const cloudinary_1 = require("cloudinary");
+const dotenv_1 = require("dotenv");
+(0, dotenv_1.config)();
+cloudinary_1.v2.config({
     cloud_name: process.env.COUDINARY_CLOUD_NAME,
     api_key: process.env.COUDINARY_API_KEY,
     api_secret: process.env.COUDINARY_API_SECRET,
 });
-export default cloudinary;
+exports.default = cloudinary_1.v2;
